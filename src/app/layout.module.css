@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #0066ff;
+  margin-bottom: 8px;
+}
+
+.nav a {
+  padding: 0 8px;
+  text-decoration: none;
+
+  color: #000;
+}
