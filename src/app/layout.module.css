@@ -5,6 +5,10 @@
   border-bottom: 1px solid #0066ff;
   margin-bottom: 8px;
 }
+.header a {
+  text-decoration: none;
+  color: #000;
+}
 
 .nav a {
   padding: 0 8px;
