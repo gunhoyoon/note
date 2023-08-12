@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import React from "react";
 import { getProduct, getProducts } from "@/service/products";
 
 export const dynamicParams = true;
+
+// export const revalidate = 10;
 // 인 경우 strumming server side rendering 으로 동작함
 // true(기본값): 에 포함되지 않은 동적 세그먼트는 generateStaticParams요청 시 생성됩니다. 라고 나와있는데
 type Props = {
