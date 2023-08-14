@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { getProducts } from "@/service/products";
 import styles from "./page.module.css";
-import CatText from "./cat-text";
+import MeowArticle from "@/components/MeowArticle";
 
 // export const revalidate = 10;
 
@@ -22,15 +22,19 @@ export default async function ProductPage() {
           <li key={i}>
             <Link href={`/products/${product.id}`}>{product.name}</Link>
             {/* 해당 id 값으로 경로를 만들고 그 id가 가지고 있는 name을 보여줄거임 */}
+            {/* 기존 페이지별 라우팅에서 컴포넌트별 라우팅이 가능해진다고 하는게 렌더링 방식에서 ssr와 csr이 가능하다는거지 isr ssg ssr이 페이지단 하나에서 나뉘어서 가능하다는 게 아닌가?
+             */}
           </li>
         ))}
       </ul>
 
-      {/* <CatText /> */}
+      <MeowArticle />
     </div>
   );
 }
 
 // 지금 이렇게 되면 기존 app 내부의 페이지(ssg) 로 생성 다른 리스트 자체는 ssg / 마지막 리스트의 텍스트만 isr로 동작
 // 인줄 알았는데, 5초로 설정해놓고 기존 data, products.json의 데이터를 바꿔보니 5초 후 같이 업데이트 됨
+// revalidate 를 사용한 해당 url 만 업데이트 시키는 것이 아닌 해당 url 이 바뀐걸 감지할 때 페이지 전체 중 바뀐 부분을 업데이트 해주는 거임
+// revalidate 라는 속성의 역할임
 // 왜 그런거임 ????? 그리고 fetch 는 브라우저 api 인데 지금 서버상에서 사용하고 있음 엘리꺼 답변 토대로 다시 보기

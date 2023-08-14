@@ -16,6 +16,9 @@ export async function getProducts(): Promise<Product[]> {
     "products",
     "products.json"
   );
+  // 내가 이거 경로 바뀌는지 확인하려고 폴더 구조를 products 폴더 하나 추가해서 작성했었는데. route 파일에서 GET 함수만들어서 get 메서드 사용할때 해당 폴더 구조가 잘못된줄알고 건들였다가
+  // 제대로 요청했음에도 서버 에러남. 사실 export defalut 로 선언한게 잘못이었는데 500에러가 떠도 서버가 나기 때문에 내 문제임
+
   // console.log(filepath);
   //현재 경로 반환 (해당 로직의 경우 /data/products/products.json)test
   const data = await fs.readFile(filepath, "utf-8");
