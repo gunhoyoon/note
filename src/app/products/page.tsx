@@ -22,7 +22,7 @@ export default async function ProductPage() {
       <Image src={clothesImage} alt="clothes" />
       {/* Nextjs에서 제공하는 image 태그 , 서버상에 가지고있는 이미지라면 이렇게 작성해서 사용가능 */}
       {/* Nextjs 제공하는 태그 사용시 next가 이미지 최적화 해줘서 용량 줄어듦 */}
-      <h1>제품 소개 페이지! 버전 3</h1>
+      <h1>제품 소개 페이지! 버전 4</h1>
       <ul>
         {products.map((product, i) => (
           <li key={i}>
