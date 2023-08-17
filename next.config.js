@@ -21,8 +21,7 @@ const nextConfig = {
         permanent: false, // false 설정 시 status code 307을 반환, 일시적으로 바뀐거 뿐이니 캐시하지마라
       },
     ];
-  }, // 이전 경로를 북마크 , 즐겨찾기 해두고 사용하는 사용자들이 있을 수 있기 떄문에
-
+  },
   async rewrites() {
     // 사용자가 url 쓰기 복잡해 간편하게 사용하고 싶거나 , 그대로 노출되는게 부담이 있을 때
     return [

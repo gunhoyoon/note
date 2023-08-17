@@ -19,7 +19,10 @@ export default function middleware(request: NextRequest) {
 // 프로젝트 모든 경로에서 미들웨어가 실행된다.
 // 전체가 실행되기 때문에 미들웨어를 사용하지 않을 수 있게 처리도 가능하다
 
-export const config = {
-  matcher: ["/products/:path*"],
-  // /products/:path* 관련 경로에만 미들웨어가 동작하게 됨
-};
+// export const config = {
+//   matcher: ["/products/:path+", "/about/:path"], // 단일 , 다중 경로에 대한 처리도 가능
+//   // /products/:path* : 관련 경로에만 미들웨어가 동작하게 됨, products 기본 페이지도 미들웨어 포함
+//   // /products/:path+ : products 메인페이지 미들웨어 미포함
+// };
+
+// 제품 소개 페이지(청바지 , 티셔츠 , 부츠 리스트 있는 페이지)에서

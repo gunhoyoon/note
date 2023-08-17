@@ -9,7 +9,7 @@ export default function GobackProductsButton() {
   return (
     <button
       onClick={() => {
-        router.back();
+        router.push("/products");
         // 이전으로 이동하고 싶을 때 back , 이전 이외 다른 페이지로 이동하고 싶을 때 push("/해당경로")
       }}
     >
