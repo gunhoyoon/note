@@ -1,13 +1,8 @@
-import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-const mock = {
-  name: "건호",
-  name2: "민해",
-};
+// 페이지별 경로보단 전체경로 , layout 에서 사용해주는게 좋음
 
 export const metadata: Metadata = {
   title: "Products",
