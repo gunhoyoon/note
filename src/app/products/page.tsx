@@ -22,7 +22,7 @@ export default async function ProductPage() {
       <Image src={clothesImage} alt="clothes" />
       {/* Nextjs에서 제공하는 image 태그 , 서버상에 가지고있는 이미지라면 이렇게 작성해서 사용가능 */}
       {/* Nextjs 제공하는 태그 사용시 next가 이미지 최적화 해줘서 용량 줄어듦 */}
-      <h1>제품 소개 페이지! 버전 5</h1>
+      <h1>제품 소개 페이지! 버전 6</h1>
       <ul>
         {products.map((product, i) => (
           <li key={i}>
@@ -44,3 +44,7 @@ export default async function ProductPage() {
 // revalidate 를 사용한 해당 url 만 업데이트 시키는 것이 아닌 해당 url 이 바뀐걸 감지할 때 페이지 전체 중 바뀐 부분을 업데이트 해주는 거임
 // revalidate 라는 속성의 역할임
 // 왜 그런거임 ????? 그리고 fetch 는 브라우저 api 인데 지금 서버상에서 사용하고 있음 엘리꺼 답변 토대로 다시 보기
+
+// 브랜치 나눠서 따로 작업하고 합치는걸 하는건데.
+// 메인에서 작업하다가 릴리즈로 나누고, vercel 에서 메인을 릴리즈로 바꾸고 메인에서 작업한걸 메인에 푸시하면
+// vercel 상에서의 메인은 릴리즈 이기 때문에 메인엔 반영이 안돼야하는거 아닌가 근데 왜 반영이 되는거임
